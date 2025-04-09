@@ -18,14 +18,16 @@ class Test_02 extends Test_00 {
 // Для проверки кода снимите комментарий ниже
 const obj_02 = new Test_02();
 console.log(obj_02);
-console.log(obj_02.data);
-console.log(obj_02.title);
 // Task 03
 // Создайте класс Test_03, которій наследуется от класса Test_02 и добавляет метод showData(), который содержит одну строку console.log(this.data, this.title). Создайте объект и убедитесь, что метод работает. 
-// тут пишем класс
+class Test_03 extends Test_02 {
+    showData() {
+        console.log(this.data, this.title);
+    }
+}
 // Для проверки кода снимите комментарий ниже
-// const obj_03 = new Test_03();
-// obj_03.showData();
+const obj_03 = new Test_03();
+obj_03.showData();
 // Task 04
 // Наследуйтесьот класса Test_03 создайте класс Test_04. Добавьте функцию конструктор, которая принимает два текстовых параметра и задает с помощью них значения this.data и this.title. Не забывайте, если вы переписываете, создаете заново функцию конструктор, то обязаны вызывать super().
 // тут пишем класс
