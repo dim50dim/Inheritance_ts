@@ -44,12 +44,17 @@ obj_03.showData();
 // Task 04
 // Наследуйтесьот класса Test_03 создайте класс Test_04. Добавьте функцию конструктор, которая принимает два текстовых параметра и задает с помощью них значения this.data и this.title. Не забывайте, если вы переписываете, создаете заново функцию конструктор, то обязаны вызывать super().
 
-// тут пишем класс
-
+class Test_04 extends Test_03{
+    constructor(data:string,title: string){
+        super();
+        this.data = data;
+        this.title = title;
+    }
+}
 
 // Для проверки кода снимите комментарий ниже
-// const obj_04 = new Test_04('comon', 'hamon');
-// obj_04.showData();
+const obj_04 = new Test_04('comon', 'hamon');
+obj_04.showData();
 
 
 // Task 05
@@ -64,12 +69,16 @@ class M_00 {
     }
 }
 
-// тут пишем класс M_05
+class M_05 extends M_00{
+     goMath(): number {
+         return this.a * this.b;
+     }
+}
 
 
 // Для проверки кода снимите комментарий ниже
-// const obj_05 = new M_05();
-// console.log(obj_05.goMath()); // 35
+const obj_05 = new M_05();
+console.log(obj_05.goMath()); // 35
 
 
 
