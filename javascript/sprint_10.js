@@ -12,9 +12,14 @@ console.log(obj_01);
 // Task 02
 // Наследуйтесьот класса Test_00, создайте класс Test_02, добавьте в него свойство title, равное 'class 02'. Создайте объект на основе класса Test_02 и выведите в консоль. Убедитесь что объект содержит свойства класса Test_00 и Test_02.
 // тут пишем класс
+class Test_02 extends Test_00 {
+    title = 'class 02';
+}
 // Для проверки кода снимите комментарий ниже
-// const obj_02 = new Test_02();
-// console.log(obj_02);
+const obj_02 = new Test_02();
+console.log(obj_02);
+console.log(obj_02.data);
+console.log(obj_02.title);
 // Task 03
 // Создайте класс Test_03, которій наследуется от класса Test_02 и добавляет метод showData(), который содержит одну строку console.log(this.data, this.title). Создайте объект и убедитесь, что метод работает. 
 // тут пишем класс
