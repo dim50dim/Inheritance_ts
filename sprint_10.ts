@@ -127,14 +127,20 @@ class P_00 {
         this.a = a;
     }
 }
-
+class P_08 extends P_00{
+    b : number;
+       constructor(a: number,b : number) {
+          super(a)
+            this.b = b;
+       }
+}
 // тут пишем класс P_08
 
 
 
 // Для проверки кода снимите комментарий ниже
-// const obj = new P_08(3, 7);
-// console.log(obj.a + obj.b);
+const obj = new P_08(3, 7);
+console.log(obj.a + obj.b);
 
 
 // Task 09
