@@ -108,11 +108,17 @@ const obj = new P_08(3, 7);
 console.log(obj.a + obj.b);
 // Task 09
 // Создайте класс наследник P_09 для класса P_08. В классе  P_09 добавьте свойство sum равное нулю. Добавьте метод mathSum(), который суммирует this.a и this.b  и кладет результат в this.sum. 
+class P_09 extends P_08 {
+    sum = 0;
+    mathSum() {
+        this.sum = this.a + this.b;
+    }
+}
 // тут пишем класс
 // Для проверки кода снимите комментарий ниже
-// const obj_09 = new P_09(20, 30);
-// obj_09.mathSum();
-// console.log(obj_09);
+const obj_09 = new P_09(20, 30);
+obj_09.mathSum();
+console.log(obj_09);
 // Task 10
 // Создайте класс P_10 как наследника P_09. Добавьте метод isSumEven, который возвращает true если сумма - четная и false в остальных случаях. 
 // тут пишем класс
