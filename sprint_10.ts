@@ -88,8 +88,10 @@ console.log(obj_05.goMath()); // 35
 // return n % 2 === 0 ? 1 : 0;
 // т.е. строкой n = super.goMath() мы выполняем код из метода родителя (суммируем числа), а в данном методе проверяем является ли число четным.
   class M_06 extends M_00{
-    const n = super.goMath();
-    return n % 2 === 0 ? 1 : 0;
+      goMath(): number {
+        const n = super.goMath();
+        return n % 2 === 0 ? 1 : 0;
+      }
 
   }
 // тут пишем класс
