@@ -87,12 +87,16 @@ console.log(obj_05.goMath()); // 35
 // const n = super.goMath();
 // return n % 2 === 0 ? 1 : 0;
 // т.е. строкой n = super.goMath() мы выполняем код из метода родителя (суммируем числа), а в данном методе проверяем является ли число четным.
+  class M_06 extends M_00{
+    const n = super.goMath();
+    return n % 2 === 0 ? 1 : 0;
 
+  }
 // тут пишем класс
 
 // Для проверки кода снимите комментарий ниже
-// const obj_06 = new M_06();
-// console.log(obj_06.goMath());
+const obj_06 = new M_06();
+console.log(obj_06.goMath());
 
 
 // Task 07
