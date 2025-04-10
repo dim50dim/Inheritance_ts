@@ -178,13 +178,23 @@ console.log(obj_10.isSumEven());
 
 // Task 11
 // Теперь перейдем к более интересным вещам. Давайте пройдемся по базовым примерам фронтенда. Создайте класс U_01, который содержит свойства username, email, status (число, по умолчанию 0), password. Поля username, email, password заполняются через конструктор. 
-
+   class U_01{
+    username: string;
+    email: string;
+    status: number;
+    password: string;
+      constructor(username: string, email:string,password: string){
+        this.username = username,
+        this.email = email,
+        this.password = password
+      }
+   }
 // тут пишем класс
 
 
 // Для проверки кода снимите комментарий ниже
-// const user_01 = new U_01('alex', 'alex@mail.ua', 'qwerty');
-// console.log(user_01);
+const user_01 = new U_01('alex', 'alex@mail.ua', 'qwerty');
+console.log(user_01);
 
 // Task 12
 // Создайте класс U_02, который наследуется от U_01. Допишите метод prepare(), который получает аргумент s (строку), обрезает пробелы и переводит текст в нижний регистр, возвращая результат. 
