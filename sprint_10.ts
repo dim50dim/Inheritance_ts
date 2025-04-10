@@ -106,12 +106,16 @@ console.log(obj_06.goMath());
 // const n = super.goMath();
 // return n % 2 === 0;
 // Проверьте роботу. Я надеюсь, что и в предыдущем и в текущих заданиях вы не забываете указывать тип данных, который возвращает метод. 
-
-// тут пишем класс
-
+  
+class M_07 extends M_00{
+    isEven() : boolean{
+        const n = super.goMath();
+        return n % 2 === 0;
+    }
+}
 // Для проверки кода снимите комментарий ниже
-// const obj_07 = new M_07();
-// console.log(obj_07.isEven());
+const obj_07 = new M_07();
+console.log(obj_07.isEven());
 
 
 // Task 08
