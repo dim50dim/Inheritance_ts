@@ -136,7 +136,7 @@ console.log(obj_10.isSumEven());
 class U_01 {
     username;
     email;
-    status;
+    status = 0;
     password;
     constructor(username, email, password) {
         this.username = username,
