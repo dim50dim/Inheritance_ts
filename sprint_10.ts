@@ -163,12 +163,16 @@ console.log(obj_09);
 // Создайте класс P_10 как наследника P_09. Добавьте метод isSumEven, который возвращает true если сумма - четная и false в остальных случаях. 
 
 // тут пишем класс
-
+class P_10 extends P_09 {
+    isSumEven(): boolean{
+         return this.sum % 2 === 0;
+    }
+}
 
 
 // Для проверки кода снимите комментарий ниже
-// const obj_10 = new P_10(22, 33);
-// console.log(obj_10.isSumEven());
+const obj_10 = new P_10(22, 33);
+console.log(obj_10.isSumEven());
 
 
 // Task 11
