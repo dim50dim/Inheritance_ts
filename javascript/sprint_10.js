@@ -124,6 +124,7 @@ console.log(obj_09);
 // тут пишем класс
 class P_10 extends P_09 {
     isSumEven() {
+        this.mathSum();
         return this.sum % 2 === 0;
     }
 }
