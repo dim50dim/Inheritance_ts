@@ -150,10 +150,14 @@ const user_01 = new U_01('alex', 'alex@mail.ua', 'qwerty');
 console.log(user_01);
 // Task 12
 // Создайте класс U_02, который наследуется от U_01. Допишите метод prepare(), который получает аргумент s (строку), обрезает пробелы и переводит текст в нижний регистр, возвращая результат. 
-// тут пишем класс
+class U_02 extends U_01 {
+    prepare(s) {
+        return s.trim().toLowerCase();
+    }
+}
 // Для проверки кода снимите комментарий ниже
-// const user_02 =  new U_02('alEx', 'alex@mail.ua', 'qwerty');
-// console.log(user_02.prepare('alEx'));
+const user_02 = new U_02('alEx', 'alex@mail.ua', 'qwerty');
+console.log(user_02.prepare('alEx'));
 // Task 13
 // Создайте класс U_03, наследуйтесь от класса U_02, и допишите свойство isPasswordCorrect (по умолчанию false) и метод validatePassword, который делает следующее:
 // удаляет пробелы по краям пароля. 
