@@ -164,11 +164,21 @@ console.log(user_02.prepare('alEx'));
 // проверяет длину пароля. Если длина меньше 8 символов, то выставляет this.isPasswordCorrect равным false и возвращает false.
 // проверяет что в пароле есть символы в разных регистрах - если нет то  выставляет this.isPasswordCorrect равным false и возвращает false.
 // если проверки пройдены то выставляет this.isPasswordCorrect равным true и возвращает true.
+class U_03 extends U_02 {
+    isPasswordCorrect = false;
+    validatePassword() {
+        this.password = this.password.trim();
+        if (this.password.length < 8) {
+            this.isPasswordCorrect = false;
+        }
+        return false;
+    }
+}
 // тут пишем класс
 // Для проверки кода снимите комментарий ниже
-// const user_03 =  new U_03('alex', 'alex@mail.ua', 'querty123');
-// user_03.validatePassword();
-// console.log(user_03.isPasswordCorrect);
+const user_03 = new U_03('alex', 'alex@mail.ua', 'querty123');
+user_03.validatePassword();
+console.log(user_03.isPasswordCorrect);
 // Task 14
 // Создайте класс U_04 который наследуется от U_03 и добавьте в него свойство isEmailCorrect равное false. Напишите метод validateEmail, который валидирует емейл. Если валидация не пройдена, то isEmailCorrect ставится как false, и возвращается false. Если пройдена, то isEmailCorrect ставится как true, и возвращается true. Перед валидацией email примените к свойству this.email метод prepare. Т.е. измените само свойство this.email.
 // для валидации используйте 

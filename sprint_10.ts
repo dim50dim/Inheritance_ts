@@ -216,15 +216,26 @@ console.log(user_02.prepare('alEx'));
 // проверяет длину пароля. Если длина меньше 8 символов, то выставляет this.isPasswordCorrect равным false и возвращает false.
 // проверяет что в пароле есть символы в разных регистрах - если нет то  выставляет this.isPasswordCorrect равным false и возвращает false.
 // если проверки пройдены то выставляет this.isPasswordCorrect равным true и возвращает true.
+class U_03 extends U_02{
+    isPasswordCorrect : boolean = false;
 
+ validatePassword(){
+    this.password = this.password.trim();
+
+    if(this.password.length < 8) {
+        this.isPasswordCorrect = false;
+    }
+    return false;
+ }
+}
 // тут пишем класс
 
 
 // Для проверки кода снимите комментарий ниже
 
-// const user_03 =  new U_03('alex', 'alex@mail.ua', 'querty123');
-// user_03.validatePassword();
-// console.log(user_03.isPasswordCorrect);
+const user_03 =  new U_03('alex', 'alex@mail.ua', 'querty123');
+user_03.validatePassword();
+console.log(user_03.isPasswordCorrect);
 
 
 // Task 14
