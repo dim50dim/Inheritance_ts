@@ -218,14 +218,14 @@ console.log(user_02.prepare('alEx'));
 // если проверки пройдены то выставляет this.isPasswordCorrect равным true и возвращает true.
 class U_03 extends U_02{
     isPasswordCorrect : boolean = false;
-
+        
  validatePassword(){
     this.password = this.password.trim();
 
-    if(this.password.length < 8) {
+    if(this.password.length > 8) {
         this.isPasswordCorrect = false;
     }
-    return false;
+  
  }
 }
 // тут пишем класс
@@ -236,6 +236,8 @@ class U_03 extends U_02{
 const user_03 =  new U_03('alex', 'alex@mail.ua', 'querty123');
 user_03.validatePassword();
 console.log(user_03.isPasswordCorrect);
+console.log(user_03);
+
 
 
 // Task 14

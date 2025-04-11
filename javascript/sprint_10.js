@@ -168,10 +168,9 @@ class U_03 extends U_02 {
     isPasswordCorrect = false;
     validatePassword() {
         this.password = this.password.trim();
-        if (this.password.length < 8) {
+        if (this.password.length > 8) {
             this.isPasswordCorrect = false;
         }
-        return false;
     }
 }
 // тут пишем класс
@@ -179,6 +178,7 @@ class U_03 extends U_02 {
 const user_03 = new U_03('alex', 'alex@mail.ua', 'querty123');
 user_03.validatePassword();
 console.log(user_03.isPasswordCorrect);
+console.log(user_03);
 // Task 14
 // Создайте класс U_04 который наследуется от U_03 и добавьте в него свойство isEmailCorrect равное false. Напишите метод validateEmail, который валидирует емейл. Если валидация не пройдена, то isEmailCorrect ставится как false, и возвращается false. Если пройдена, то isEmailCorrect ставится как true, и возвращается true. Перед валидацией email примените к свойству this.email метод prepare. Т.е. измените само свойство this.email.
 // для валидации используйте 
