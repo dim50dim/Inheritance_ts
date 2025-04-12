@@ -202,6 +202,7 @@ console.log(user_01);
   class U_02 extends U_01{
     prepare(s:string) : string{
           return s.trim().toLowerCase();
+          
     }
   }
 
