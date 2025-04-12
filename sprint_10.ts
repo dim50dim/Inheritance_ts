@@ -202,7 +202,7 @@ console.log(user_01);
   class U_02 extends U_01{
     prepare(s:string) : string{
           return s.trim().toLowerCase();
-          
+
     }
   }
 
@@ -223,10 +223,10 @@ class U_03 extends U_02{
  validatePassword(){
     this.password = this.password.trim();
 
-    if(this.password.length > 8) {
+    if(this.password.length < 8) {
         this.isPasswordCorrect = false;
     }
-  
+   return this.isPasswordCorrect;
  }
 }
 // тут пишем класс

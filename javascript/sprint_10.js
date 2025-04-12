@@ -168,9 +168,10 @@ class U_03 extends U_02 {
     isPasswordCorrect = false;
     validatePassword() {
         this.password = this.password.trim();
-        if (this.password.length > 8) {
+        if (this.password.length < 8) {
             this.isPasswordCorrect = false;
         }
+        return this.isPasswordCorrect;
     }
 }
 // тут пишем класс
